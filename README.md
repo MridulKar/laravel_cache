@@ -1,4 +1,4 @@
-<h3 style="color:red">1. storings item in cache</h3>
+1. storings item in cache
 
 #Cache Facades...
 
@@ -18,28 +18,28 @@ cache()->remember('users', $seconds, function(){
 });
 
 
-<h3 style="color:red">2. retrieving items from cache</h3>
+2. retrieving items from cache
 
 Cache::get('key');
 Cache::get('key', 'default_value');
 Cache::get('key', 'callback');
 
-<h3 style="color:red">3. Item exists in cache</h3>
+3. Item exists in cache
 
 if(Cache::has('key')){
 
 }
 
-<h3 style="color:red">4. Removing Items from cache</h3>
+4. Removing Items from cache
 
 Cache::forget('key');
 Cache::put('key', 'value', 0);
 
-<h3 style="color:red">5. Removing Entire cache</h3>
+5. Removing Entire cache
 
 Cache::flush();
 
-<h3 style="color:red">6. Retrieving and store Item</h3>
+6. Retrieving and store Item
 
 Cache::remember('users', $seconds, function(){
  return ModelName::all();
@@ -49,6 +49,6 @@ Cache::rememberForever('users', $seconds, function(){
  return ModelName::all();
 });
 
-<h3 style="color:red">7. Retrieve and Delete Item</h3>
+7. Retrieve and Delete Item
 
 Cache::pull('key');
