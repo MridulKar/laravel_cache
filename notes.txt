@@ -18,20 +18,11 @@ cache()->remember('users', $seconds, function(){
 });
 
 
-
 2. retrieving items from cache
 
 Cache::get('key');
 Cache::get('key', 'default_value');
 Cache::get('key', 'callback');
-
-Cache::remember('users', $seconds, function(){
- return ModelName::all();
-});
-
-Cache::rememberForever('users', $seconds, function(){
- return ModelName::all();
-});
 
 3. Item exists in cache
 
@@ -61,6 +52,3 @@ Cache::rememberForever('users', $seconds, function(){
 7. Retrieve and Delete Item
 
 Cache::pull('key');
-
-
-8. storage>framework>cache>data here will be added file after adding caches
